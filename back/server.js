@@ -14,3 +14,4 @@ app.use('/students', students)
 app.listen(3001, () => {
     console.log('Server for school study case, running on port 3001')
 })
+
