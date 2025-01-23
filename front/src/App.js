@@ -6,11 +6,13 @@ import Students from './components/applications/school/Students';
 import Student from './components/applications/school/Student';
 import Classes from './components/applications/school/Classes';
 import Classe from './components/applications/school/Classe';
+import ResponsiveAppBar from './components/pages/ResponsiveAppBar';
 
 const App = () => {
   return (
     <Router>
       <div>
+        <ResponsiveAppBar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/students" element={<Students />} />

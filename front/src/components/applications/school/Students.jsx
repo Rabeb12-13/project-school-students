@@ -1,6 +1,12 @@
 import React, { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+
 export default function Students() {
     const [students, setStudents] = React.useState([]);
     const [loading, setLoading] = useState(true);
@@ -26,22 +32,40 @@ export default function Students() {
         <div>
             <a href="/">Go back to home</a>
             <h1>All students</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Full name</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Table>
+                <TableHead>
+                    <TableRow>
+                        <TableCell>
+                            Full name
+                        </TableCell>
+                        <TableCell>
+                            Mail
+                        </TableCell>
+                        <TableCell>
+                            Phone number
+                        </TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
                     {students.map((student) => (
-                        <tr key={student.id}>
-                            <Link to={`/student/${student.id}`} state={{ student }}>
-                                {student.first_name} {student.last_name}
-                            </Link>
-                        </tr>
+                        <TableRow 
+                        key={student.id}
+                        >
+                            <TableCell>
+                                <Link to={`/student/${student.id}`} state={{ student }}>
+                                    {student.first_name} {student.last_name}
+                                </Link>
+                            </TableCell>
+                            <TableCell>
+                                {student.mail}
+                            </TableCell>
+                            <TableCell>
+                                {student.phone}
+                            </TableCell>
+                        </TableRow>
                     ))}
-                </tbody>
-            </table>
+                </TableBody>
+            </Table>
         </div>
     )
 }
