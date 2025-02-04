@@ -1,0 +1,141 @@
+/* Section Accueil */
+#acceuil {
+    width: 100%;
+    height: 100vh; /* Ajuster la hauteur selon votre besoin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Pour l'image en arrière-plan */
+  }
+  
+  #acceuil img {
+    position: absolute; /* L'image va se superposer à la section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* L'image couvre entièrement la section */
+    object-fit: cover; /* Assure que l'image garde ses proportions */
+    z-index: -1; /* Place l'image derrière le texte */
+  }
+  
+  #acceuil h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    position: absolute;
+    z-index: 1; /* Texte devant l'image */
+  }
+  
+  /* Section À propos */
+  #apropos {
+    padding: 60px 20px;
+    background-color: #808080;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  #apropos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Déplace le titre plus haut */
+    text-align: center; /* Centre le titre */
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divise la section en deux colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    align-items: center; /* Centre verticalement les éléments */
+  }
+  
+  .about-text-box {
+    background-color: #505050;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-image img {
+    width: 100%; /* L'image occupe toute la largeur de sa colonne */
+    border-radius: 8px;
+  }
+  #apropos{
+    text-align: justify;
+  }
+  
+  /* Media Queries pour la section À propos */
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr; /* Passe à une seule colonne sur mobile */
+    }
+  
+    .about-text-box,
+    .about-image img {
+      width: 100%; /* Les éléments occupent toute la largeur sur mobile */
+    }
+  }
+  
+
+
+  /* Section Fonctionnalités */
+#fonctionnalites {
+    padding: 60px 20px;
+    background-color: #808080; /* Couleur de fond */
+    margin-top: 30px;
+    text-align: center; /* Centre le titre et les éléments */
+  }
+  
+  #fonctionnalites h2 {
+    font-size: 2rem;
+    margin-bottom: 40px; /* Espace sous le titre */
+  }
+  
+  .fonctionnalites-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divise en 3 colonnes égales */
+    gap: 20px; /* Espace entre les boîtes */
+    max-width: 1200px; /* Largeur maximale pour éviter que la section ne s'étende trop */
+    margin: 0 auto; /* Centre le conteneur */
+  }
+  
+  .fonctionnalite-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espace entre l'image et le bouton */
+  }
+  
+  .fonctionnalite-box img {
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    object-fit: cover; /* Assure que l'image garde ses proportions */
+    border-radius: 8px; /* Coins arrondis pour l'image */
+  }
+  
+  .fonctionnalite-btn {
+    padding: 10px 20px;
+    background-color: #505050; /* Couleur du bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Animation au survol */
+  }
+  
+  .fonctionnalite-btn:hover {
+    background-color: #0056b3; /* Couleur au survol */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .fonctionnalites-container {
+      grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+  }

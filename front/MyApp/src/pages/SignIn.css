@@ -1,0 +1,144 @@
+/* Conteneur principal */
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    background-color: #f4f4f4; /* Couleur de fond */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Grand conteneur divisé en deux */
+  .signin-content {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    overflow: hidden; /* Pour que l'image ne dépasse pas */
+    max-width: 1600px; /* Largeur maximale du contenu */
+    width: 90%; /* Largeur relative pour s'adapter à l'écran */
+    height: 80vh; /* Hauteur relative pour s'adapter à l'écran */
+  }
+  
+  /* Partie gauche : Image */
+  .signin-image {
+    flex: 1; /* Prend 50% de l'espace */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Pour que l'image ne dépasse pas */
+  }
+  
+  .signin-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre tout l'espace */
+  }
+  
+  /* Partie droite : Formulaire */
+  .signin-box {
+    flex: 1; /* Prend 50% de l'espace */
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Titre */
+  .signin-box h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Groupes de formulaire */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px; /* Largeur maximale du formulaire */
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  
+  /* Bouton de connexion */
+  .signin-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Couleur bleue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-button:hover {
+    background-color: #0056b3; /* Couleur bleue foncée au survol */
+  }
+  
+  /* Lien pour basculer vers SignUp */
+  .signup-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .signup-link button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+  
+  .signup-link button:hover {
+    color: #0056b3;
+  }
+  
+  /* Pied de page */
+  .footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .signin-content {
+      flex-direction: column; /* Empile l'image et le formulaire sur mobile */
+      height: auto; /* Hauteur automatique sur mobile */
+    }
+  
+    .signin-image {
+      height: 200px; /* Hauteur fixe pour l'image sur mobile */
+    }
+  
+    .signin-box {
+      padding: 20px;
+    }
+  
+    .signin-box h2 {
+      font-size: 1.5rem;
+    }
+  }

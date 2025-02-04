@@ -1,0 +1,98 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Sépare les 3 zones */
+    align-items: center; /* Aligne les sections verticalement */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Pleine largeur */
+    max-width: 1228px; /* Limite la largeur */
+    margin: 0 auto; /* Centre la navbar au milieu de la page */
+    background-color: white;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px -4px black;
+    z-index: 1000;
+}
+
+
+
+.nav-logo img {
+    max-width: 150px; 
+    height: auto; 
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none; 
+    gap: 30px; 
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    flex: 1; 
+    justify-content: center; 
+}
+
+
+.nav-menu li {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #ff4141;
+}
+
+
+.nav-login-cart {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+
+.nav-login-cart button {
+    padding: 8px 20px; /* Dimensions du bouton */
+    border: none;
+    border-radius: 25px; /* Boutons arrondis */
+    background-color: #f3f3f3; /* Fond blanc */
+    color: #333; /* Texte foncé */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au clic */
+.nav-login-cart button:active {
+    background-color: #f3f3f3;
+}
+
+/* Icône utilisateur */
+.nav-login-cart img {
+    width: 35px; /* Taille contrôlée de l'icône */
+    height: 35px;
+    border-radius: 50%; /* Forme ronde */
+}
+
+/* Pour les petits écrans */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Cache le menu sur mobile */
+    }
+
+    .nav-logo img {
+        max-width: 80px; /* Réduction du logo */
+    }
+
+    .nav-login-cart {
+        gap: 5px;
+    }
+}
